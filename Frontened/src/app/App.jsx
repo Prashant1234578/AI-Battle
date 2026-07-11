@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import MarkdownRenderer from './components/MarkdownRenderer';
 import './App.css';
+import axios from 'axios';
 
 // SVG Icons as React Components to avoid dependency issues
 const Icons = {
@@ -157,19 +158,9 @@ function App() {
     }
 
     try {
-      const response = await fetch('http://localhost:3000/api/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ problem: promptText }),
-      });
+      const response = await axios.post('http://localhost:3000/invoke', { input: promptText });
 
-      if (!response.ok) {
-        throw new Error(`Server returned status: ${response.status}`);
-      }
-
-      const data = await response.json();
+      const data = response.data;
 
       // Update the temporary message with the real results
       setSessions(prevSessions => {
