@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Battle Arena</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 60px 40px;
+            text-align: center;
+            max-width: 800px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 3em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            color: #555;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .feature {
+            padding: 20px;
+            border-radius: 10px;
+            background: #f8f9fa;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+        }
+        
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .feature p {
+            color: #777;
+            font-size: 0.95em;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+        
+        .footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.9em;
+        }
+        
+        .github-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .github-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚔️ AI Battle Arena</h1>
+        
+        <p class="subtitle">
+            A multi-LLM comparison platform that generates coding solutions from Gemini, Mistral, and Cohere, 
+            then uses LangGraph and Gemini to evaluate, score, and compare their responses in real time.
+        </p>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🤖</div>
+                <h3>Multi-LLM</h3>
+                <p>Compare responses from Gemini, Mistral, and Cohere</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Real-Time</h3>
+                <p>Instant evaluation and comparison of results</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h3>Smart Scoring</h3>
+                <p>Intelligent ranking based on multiple criteria</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">💻</div>
+                <h3>Coding Focus</h3>
+                <p>Specialized for coding problem solutions</p>
+            </div>
+        </div>
+        
+        <a href="https://github.com/Prashant1234578/AI-Battle" class="cta-button">View on GitHub</a>
+        
+        <div class="footer">
+            <p>Built with ❤️ using LangGraph, Gemini, Mistral, and Cohere</p>
+            <p>Follow the project on <a href="https://github.com/Prashant1234578/AI-Battle" class="github-link">GitHub</a></p>
+        </div>
+    </div>
+</body>
+</html>
