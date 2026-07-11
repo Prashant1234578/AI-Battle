@@ -8,7 +8,8 @@ export const  geminiModel=new ChatGoogle({
     apiKey:config.GOOGLE_API_KEY
 })
 export const MistralAIModel=new ChatMistralAI({
-    model:"mistral-medium-latest"
+    model:"mistral-medium-latest",
+    apiKey:config.MISTRAL_API_KEY
 })
 export const  cohereModel=new ChatCohere({
     model:"command-a-03-2025",
